@@ -1,0 +1,9 @@
+# If you are using the hidraw implementation, then do something like the
+# following, substituting the VID and PID with your device. Busnum 1 is USB.
+
+# HID mode alphie
+SUBSYSTEM=="usb", ATTR{idVendor}=="081e", ATTR{idProduct}=="bd04", ACTION=="add", RUN="/alphadrive/alphadrive switch"
+
+# Comms mode alphie
+SUBSYSTEM=="usb", ATTR{idVendor}=="081e", ATTR{idProduct}=="bd01", ACTION=="add", RUN="/alphadrive/alphadrive"
+
